@@ -1,0 +1,254 @@
+body {
+  background-color: lightgreen;
+
+  /* Smoothly transition the background color */
+  transition: background-color .5s;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+nav{
+  
+  font-family: 'Ubuntu', sans-serif;
+
+}
+nav ul{
+  display:flex;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  list-style-type: none;
+  background-color:black;
+  color: white;
+}
+
+nav ul li{
+  padding: 0 12px;
+}
+.brand img{
+  width: 34px;
+  border-radius: 50%;
+  
+}
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size:1.3rem;
+}
+a:link{
+  text-decoration: none;
+  color: white;
+}
+
+a:hover{
+  background-color: #3498DB;
+  padding: 10px;
+}
+
+a:visited,a.focus{
+  color: white;
+}
+
+.dropbtn1 {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn1:hover, .dropbtn1:focus {
+  background-color: #3498DB;
+}
+
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown1-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown1-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown1 a:hover {
+  background-color: #ddd;
+}
+
+.show {display: block;}
+
+.player {
+
+  width: 18rem;
+  height: 82vh;
+  background-color:rgb(236, 243, 246);
+  border-radius: 2rem;
+  box-shadow: 10px 10px 15px rgb(118, 117, 117);
+  color: black;
+  padding:2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  margin: auto;
+}
+
+.details {
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 15px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted white;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+   /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+   opacity: 0;
+   transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top:100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.track-art {
+  margin: 25px;
+  height: 250px;
+  width: 250px;
+  background-image: url("https://images.pexels.com/photos/262034/pexels-photo-262034.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.now-playing {
+  font-size: 1rem;
+}
+
+.track-name {
+  font-size: 3rem;
+}
+
+.track-artist {
+  font-size: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.playpause-track, .prev-track, .next-track {
+  padding: 25px;
+  opacity: 0.8;
+
+  /* Smoothly transition the opacity */
+  transition: opacity .2s;
+}
+
+.playpause-track:hover, .prev-track:hover, .next-track:hover {
+  opacity: 1.0;
+}
+
+.slider_container {
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modify the appearance of the slider */
+.seek_slider, .volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: black;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Modify the appearance of the slider thumb */
+.seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: gray;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.seek_slider:hover, .volume_slider:hover {
+  opacity: 1.0;
+}
+
+.seek_slider {
+  width: 60%;
+}
+
+.volume_slider {
+  width: 30%;
+}
+
+.current-time, .total-duration {
+  padding: 10px;
+}
+
+i.fa-volume-down, i.fa-volume-up {
+  padding: 10px;
+}
+
+i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+  color: black;
+  cursor: pointer;
+}

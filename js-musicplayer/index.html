@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musico</title>
+  <!-- Load FontAwesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <!-- Load the custom CSS style file -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li class="brand"><img src="Image\logo.png" alt="Musico">Musico</li>
+      <li><a  href="http://127.0.0.1:5500/index.html">Home</a></li>
+      <div class="dropdown1">
+        <button onclick="myFavouritesFunction()" class="dropbtn1">Favourites</button>
+        <div id="myFavourites" class="dropdown1-content">
+          <a>Fav1...</a>
+          <a>Fav2...</a>
+          <a>Fav3...</a>
+        </div>
+      </div>
+      <li><a  href=https://www.google.com/search?q=about+music&oq=about+music&aqs=chrome..69i57j0i512l9.5956j0j7&sourceid=chrome&ie=UTF-8 target="_blank">About</a></li>
+      <li><a  href="support link/support.html" target="_blank">Support</a></li>
+    </ul>
+  </nav>
+  <div class="player">
+    <div class="details">
+      <div class="now-playing">PLAYING x OF y</div>
+      <div class="track-art"></div>
+      <div class="track-name">Track Name</div>
+      <div class="track-artist">Track Artist</div>
+    </div>
+    <div class="buttons">
+      <div class="prev-track" onclick="prevTrack()"><div class="tooltip"><i class="fa fa-step-backward fa-2x"></i>
+        <span class="tooltiptext">Previous</span></div>
+      </div>
+      <div class="playpause-track" onclick="playpauseTrack()"><div class="tooltip"><i class="fa fa-play-circle fa-4x"></i>
+        <span class="tooltiptext">Play</span></div>
+      </div>
+      <div class="next-track" onclick="nextTrack()"><div class="tooltip"><i class="fa fa-step-forward fa-2x"></i>
+        <span class="tooltiptext">Next</span></div>
+      </div>
+    </div>
+    <div class="slider_container">
+      <div class="current-time">00:00</div>
+      <input type="range" min="0" max="100" value="0" class="seek_slider" onchange="seekTo()">
+      <div class="total-duration">00:00</div>
+    </div>
+    <div class="slider_container">
+      <div class="tooltip"><i class="fa fa-volume-down"></i>
+        <span class="tooltiptext">Low</span>
+      </div>
+      <input type="range" min="1" max="100" value="100" class="volume_slider" onchange="setVolume()">
+      <div class="tooltip"><i class="fa fa-volume-up"></i>
+        <span class="tooltiptext">High</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load the main script for the player -->
+  <script src="main.js"></script>
+</body>
+</html>
